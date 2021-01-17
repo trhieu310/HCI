@@ -3,35 +3,36 @@ import {
   View,
   Button,
   StyleSheet,
-  Dimensions,
+  Text,
   TouchableOpacity,
   Image,
-  Text,
-  TextInput,
 } from 'react-native';
-
-const {height} = Dimensions.get('window');
+import InputText from '../reuse/inputText';
+import TopNavigation from '../reuse/topNavigation';
+import VOCA from '../reuse/voca';
 
 const Login = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View>
-        <View style={styles.line} />
-        <View style={styles.header}>
-          <View style={styles.backbtn}>
-            <TouchableOpacity onPress={() => navigation.replace('Start')}>
-              <Image source={require('../../Icons/back_img.png')} />
-            </TouchableOpacity>
-          </View>
-          <Text style={styles.name}>Đăng nhập</Text>
-          <Image />
-        </View>
+        <TopNavigation
+          navigation={navigation}
+          screen={() => navigation.replace('Start')}
+          name="Đăng nhập"
+        />
       </View>
       <View style={styles.body}>
-        <Text>VOCA</Text>
-        <Text>LEARN BY HEART</Text>
-        <TextInput defaultValue="Email" style={styles.email} />
-        <TextInput defaultValue="Mật khẩu" style={styles.passpass} />
+        <View>
+          <VOCA />
+          <InputText placeholder="Email" />
+          <InputText placeholder="Password" />
+          <View>
+            <TouchableOpacity>
+              <Image source={''} />
+              <Text>Đăng nhập</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
       </View>
       <Button title="Go to Main" onPress={() => navigation.replace('Main')} />
     </View>
@@ -41,28 +42,10 @@ const Login = ({navigation}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-  },
-  header: {
-    alignItems: 'center',
-    paddingTop: 0,
-    height: height * 0.09,
-    flexDirection: 'row',
-    justifyContent: 'space-around',
     backgroundColor: '#00B2E5',
   },
-  line: {
-    height: 15,
-    backgroundColor: '#209CE1',
-  },
-  backbtn: {
+  body: {
     alignItems: 'center',
-    justifyContent: 'center',
-    height: 20,
-    width: 20,
-  },
-  name: {
-    color: '#ffffff',
-    fontSize: 24,
   },
 });
 
