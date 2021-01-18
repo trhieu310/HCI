@@ -1,45 +1,41 @@
 import React from 'react';
-import {View, StyleSheet, Text, Dimensions} from 'react-native';
-import {StackRouter} from '@react-navigation/native';
-
+import {View, StyleSheet, Text, Dimensions, Alert} from 'react-native';
 import InputText from '../reuse/inputText';
 import TopNavigation from '../reuse/topNavigation';
 import VOCA from '../reuse/voca';
 import * as global from '../../constants/global';
 import ClickButton from '../reuse/clickButton';
-import createAccount from './createAccount';
 
 const {width, height} = Dimensions.get('window');
 
-const Stack = createStackNavigator();
-
-const mainLogin = ({navigation}) => {
+const createAccount = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View>
         <TopNavigation
           navigation={navigation}
-          screen={() => navigation.replace('Start')}
-          name="Đăng nhập"
+          screen={() => navigation.goBack()}
+          name="Tạo tài khoản"
           icon={global.image.back_img}
         />
       </View>
       <View style={styles.body}>
         <VOCA />
+        <InputText placeholder="Name" />
         <InputText placeholder="Email" />
         <InputText placeholder="Password" />
         <View style={styles.btn_login}>
           <ClickButton
-            screen={() => navigation.replace('Main')}
-            text="Đăng nhập"
+            screen={() => Alert.alert('Đăng ký thành công')}
+            text="Đăng ký thành viên"
             backgroundColor={global.colors.white}
             color={global.colors.background}
             fontSize={24}
             height={height * 0.06}
-            width={width * 0.535}
+            width={width * 0.65}
             radius={30}
           />
-          <Text style={styles.text}>- Đăng nhập nhanh -</Text>
+          <Text style={styles.text}>- Tạo nhanh -</Text>
         </View>
       </View>
       <View style={styles.fast_login}>
@@ -64,35 +60,13 @@ const mainLogin = ({navigation}) => {
       </View>
       <View style={styles.botbtn}>
         <ClickButton
-          screen={() => navigation.push('createAccount')}
-          text="Tạo tài khoản"
-          color={global.colors.white}
-          fontSize={24}
-        />
-        <ClickButton
-          text="Quên mật khẩu"
+          screen={() => navigation.goBack()}
+          text="Đăng nhập"
           color={global.colors.white}
           fontSize={24}
         />
       </View>
     </View>
-  );
-};
-
-const Login = () => {
-  return (
-    <Stack.Navigator initialRouteName="Đăng nhập">
-      <Stack.Screen
-        name="Đăng nhập"
-        component={mainLogin}
-        options={{headerShown: false}}
-      />
-      <Stack.Screen
-        name="Tạo tài khoản"
-        component={createAccount}
-        options={{headerShown: false}}
-      />
-    </Stack.Navigator>
   );
 };
 
@@ -122,11 +96,10 @@ const styles = StyleSheet.create({
     marginRight: 20,
   },
   botbtn: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'flex-end',
-    marginTop: 130,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 120,
   },
 });
 
-export default Login;
+export default createAccount;
