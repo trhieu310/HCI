@@ -1,10 +1,21 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, ScrollView} from 'react-native';
+import NavHeader from '../../items/NavHeader';
 
-const Notification = () => {
+const Notification = ({navigation, route}) => {
   return (
     <View style={styles.container}>
-      <Text>Notification</Text>
+      <NavHeader 
+        back
+        title="Thông báo"
+        navigation={navigation}
+        route={route}
+        user
+      />
+
+      <ScrollView style={styles.content}>
+        <Text>Notification</Text>
+      </ScrollView>
     </View>
   );
 };
@@ -12,9 +23,11 @@ const Notification = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    backgroundColor: '#52BEE5'
   },
+  content: {
+    flex: 1,
+  }
 });
 
 export default Notification;
