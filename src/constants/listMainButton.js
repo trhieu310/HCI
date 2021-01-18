@@ -22,7 +22,7 @@ exports.ListMainButton = [
         to: null,
         bgColor: theme.COLOR.WHITE,
         iconBg: theme.COLOR.PRIMARY,
-        right: '',
+        right: '3',
         icon: library,
         color: null
     },
@@ -31,7 +31,7 @@ exports.ListMainButton = [
         to: null,
         bgColor: theme.COLOR.WHITE,
         iconBg: theme.COLOR.LIGHT_GREEN,
-        right: '',
+        right: '0',
         icon: pin,
         color: null
     },

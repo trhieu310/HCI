@@ -4,7 +4,7 @@ import iconDefault from '../../Icons/circle_bg.png'
 
 const MainButton = ({navigation, route, icon, to = 'Personal', title, bgColor, right, iconBg, color}) => {
     const renderRight = () => {
-        if (right) {
+        if (right != '') {
             return (
                 <View style={styles.rightBadge}>
                     <Text style={styles.textRightBadge}>{right}</Text>
@@ -21,6 +21,7 @@ const MainButton = ({navigation, route, icon, to = 'Personal', title, bgColor, r
             <View style={styles.viewTitle}>
                 <Text style={[styles.title, {color: color ? color : '#333'}]}>{title ? title : 'Title'}</Text>
             </View>
+            {renderRight()}
         </TouchableOpacity>
     )
 }

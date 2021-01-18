@@ -22,6 +22,7 @@ const Account = ({navigation, route}) => {
           iconBg={btn.iconBg}
           color={btn.color}
           to={btn.to}
+          right={btn.right}
         />
       })
       return <View>{rs}</View>
