@@ -15,7 +15,7 @@ const Login = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <TouchableOpacity onPress={() => navigation.replace('Start')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Start')}>
           <Image
             source={require('../../Icons/back_img.png')}
             style={styles.backbtn}
@@ -24,7 +24,7 @@ const Login = ({navigation}) => {
         <Text style={styles.name}>Đăng nhập</Text>
         <View />
       </View>
-      <Button title="Go to Main" onPress={() => navigation.replace('Main')} />
+      <Button title="Go to Main" onPress={() => navigation.navigate('Main')} />
     </View>
   );
 };

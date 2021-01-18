@@ -39,7 +39,7 @@ const Start = ({navigation}) => {
       <View>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => navigation.replace('Login')}>
+          onPress={() => navigation.navigate('Login')}>
           <Text style={styles.btnText}>Bắt đầu ngay</Text>
         </TouchableOpacity>
       </View>

@@ -1,11 +1,13 @@
 import React from 'react';
 import {View, Text, StyleSheet, Image, Dimensions} from 'react-native';
+import NavHeader from '../../items/NavHeader';
 
 const {width, height} = Dimensions.get('window');
 
-const Welcome = () => {
+const Welcome = ({navigation, route}) => {
   return (
     <View style={styles.container}>
+      
       <Text style={styles.voca}>VOCA</Text>
       <Text style={styles.slogan}>LEARN BY HEART</Text>
       {/* <Image source={require('../../../Icons/star.png')} style={styles.star1} /> */}
