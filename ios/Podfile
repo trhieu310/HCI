@@ -3,12 +3,20 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '10.0'
 
+<<<<<<< HEAD
 target 'tesk' do
+=======
+target 'HCI' do
+>>>>>>> eeef0ad5a18db78b059101784e950fcf21482169
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])
 
+<<<<<<< HEAD
   target 'teskTests' do
+=======
+  target 'HCITests' do
+>>>>>>> eeef0ad5a18db78b059101784e950fcf21482169
     inherit! :complete
     # Pods for testing
   end
@@ -23,10 +31,17 @@ target 'tesk' do
   end
 end
 
+<<<<<<< HEAD
 target 'tesk-tvOS' do
   # Pods for tesk-tvOS
 
   target 'tesk-tvOSTests' do
+=======
+target 'HCI-tvOS' do
+  # Pods for HCI-tvOS
+
+  target 'HCI-tvOSTests' do
+>>>>>>> eeef0ad5a18db78b059101784e950fcf21482169
     inherit! :search_paths
     # Pods for testing
   end

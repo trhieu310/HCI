@@ -1,16 +1,13 @@
 import React from 'react';
 import {View, Text, StyleSheet, Image, Dimensions} from 'react-native';
-import NavHeader from '../../items/NavHeader';
+import Voca from '../../reuse/voca';
 
 const {width, height} = Dimensions.get('window');
 
 const Welcome = ({navigation, route}) => {
   return (
     <View style={styles.container}>
-      
-      <Text style={styles.voca}>VOCA</Text>
-      <Text style={styles.slogan}>LEARN BY HEART</Text>
-      {/* <Image source={require('../../../Icons/star.png')} style={styles.star1} /> */}
+      <Voca />
       <Image
         source={require('../../../Icons/icon_intro_1.png')}
         style={styles.image}
@@ -50,6 +47,7 @@ const styles = StyleSheet.create({
     marginTop: 50,
     color: '#fff',
     fontSize: 36,
+    fontWeight: 'bold',
   },
 });
 
