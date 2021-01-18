@@ -12,6 +12,8 @@ const Account = ({navigation, route}) => {
         title="Cá nhân"
         navigation={navigation}
         route={route} 
+        right
+        user
       />
       <ScrollView style={styles.content}>
         <PersonalCard />

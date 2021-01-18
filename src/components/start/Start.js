@@ -40,7 +40,7 @@ const Start = ({navigation}) => {
       </View>
       <View style={styles.button}>
         <ClickButton
-          screen={() => navigation.replace('Login')}
+          screen={() => navigation.navigate('Login')}
           text="Bắt đầu ngay"
           backgroundColor={global.colors.white}
           color={global.colors.background}

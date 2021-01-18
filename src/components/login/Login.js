@@ -8,6 +8,7 @@ import VOCA from '../reuse/voca';
 import * as global from '../../constants/global';
 import ClickButton from '../reuse/clickButton';
 import createAccount from './createAccount';
+import {createStackNavigator} from '@react-navigation/stack';
 
 const {width, height} = Dimensions.get('window');
 
@@ -19,7 +20,7 @@ const mainLogin = ({navigation}) => {
       <View>
         <TopNavigation
           navigation={navigation}
-          screen={() => navigation.replace('Start')}
+          screen={() => navigation.navigate('Start')}
           name="Đăng nhập"
           icon={global.image.back_img}
         />
@@ -30,7 +31,7 @@ const mainLogin = ({navigation}) => {
         <InputText placeholder="Password" />
         <View style={styles.btn_login}>
           <ClickButton
-            screen={() => navigation.replace('Main')}
+            screen={() => navigation.navigate('Main')}
             text="Đăng nhập"
             backgroundColor={global.colors.white}
             color={global.colors.background}
