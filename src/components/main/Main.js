@@ -15,10 +15,12 @@ const Main = () => {
   return (
     <Tab.Navigator
       initialRouteName="Personal"
-      tabBarOption={{
-        activeTintColor: '#157cdb',
-        inactiveTintColor: '#262626',
-      }}
+      tabBarOption={
+        {
+          activeTintColor: '#157cdb',
+          inactiveTintColor: '#262626',
+        }
+      }
     >
       <Tab.Screen name="Personal" options={{tabBarLabel: 'Cá nhân'}} component={Account} />
       <Tab.Screen name="Library" component={Library} />
