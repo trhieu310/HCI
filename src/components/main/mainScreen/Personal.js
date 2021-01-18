@@ -1,11 +1,21 @@
 import React from 'react';
-import {View, Text, StyleSheet, Button} from 'react-native';
+import {View, Text, StyleSheet, Button, ScrollView} from 'react-native';
+import NavHeader from '../../items/NavHeader';
+import PersonalCard from '../../items/PersonalCard';
+import * as theme from './../../../constants/theme';
 
-const Account = ({navigation}) => {
+const Account = ({navigation, route}) => {
   return (
     <View style={styles.container}>
-      <Text>Account</Text>
-      <Button title="Go to Login" onPress={() => navigation.replace('Login')} />
+      <NavHeader 
+        menu
+        title="Cá nhân"
+        navigation={navigation}
+        route={route} 
+      />
+      <ScrollView style={styles.content}>
+        <PersonalCard />
+      </ScrollView>
     </View>
   );
 };
@@ -13,9 +23,11 @@ const Account = ({navigation}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    backgroundColor: '#52BEE5'
   },
+  content: {
+    flex: 1,
+  }
 });
 
 export default Account;

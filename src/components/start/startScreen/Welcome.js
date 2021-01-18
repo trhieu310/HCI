@@ -4,7 +4,7 @@ import Voca from '../../reuse/voca';
 
 const {width, height} = Dimensions.get('window');
 
-const Welcome = () => {
+const Welcome = ({navigation, route}) => {
   return (
     <View style={styles.container}>
       <Voca />
