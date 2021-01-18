@@ -13,9 +13,9 @@ const InputText = ({placeholder}) => {
 
 const styles = StyleSheet.create({
   container: {
-    height: height * 0.06,
+    height: height * 0.066,
     width: width - width * 0.158,
-    marginVertical: 10,
+    paddingTop: 15,
   },
   Input: {
     backgroundColor: '#fff',

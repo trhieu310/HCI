@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, StyleSheet, Text, Dimensions, Image} from 'react-native';
 import ClickButton from '../reuse/clickButton';
+import * as global from '../../constants/global';
 
 const {height} = Dimensions.get('window');
 
@@ -25,7 +26,7 @@ const styles = StyleSheet.create({
   },
   line: {
     flex: 18,
-    backgroundColor: '#209CE1',
+    backgroundColor: global.colors.topline_background,
   },
   header: {
     paddingTop: 10,
@@ -34,14 +35,14 @@ const styles = StyleSheet.create({
     alignItems: 'baseline',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    backgroundColor: '#00B2E5',
+    backgroundColor: global.colors.backgroundColor,
   },
   backbtn: {
     paddingLeft: 20,
     alignItems: 'flex-start',
   },
   name: {
-    color: '#fff',
+    color: global.colors.white,
     fontSize: 24,
   },
 });

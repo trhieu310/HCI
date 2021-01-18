@@ -6,6 +6,10 @@ import {
   Dimensions,
   Text,
 } from 'react-native';
+import Swiper from 'react-native-swiper';
+
+import ClickButton from '../reuse/clickButton';
+import * as global from '../../constants/global';
 
 import Welcome from './startScreen/Welcome';
 import Star1 from './startScreen/Star1';
@@ -14,8 +18,6 @@ import Star3 from './startScreen/Star3';
 import Star4 from './startScreen/Star4';
 import Star5 from './startScreen/Star5';
 
-import Swiper from 'react-native-swiper';
-
 const {height, width} = Dimensions.get('window');
 
 const Start = ({navigation}) => {
@@ -23,7 +25,7 @@ const Start = ({navigation}) => {
     <View style={styles.container}>
       <View style={styles.Swiper}>
         <Swiper
-          activeDotColor={'#fff'}
+          activeDotColor={global.colors.white}
           autoplay={false}
           loop={false}
           showPagination={true}
@@ -36,12 +38,17 @@ const Start = ({navigation}) => {
           <Star5 />
         </Swiper>
       </View>
-      <View>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => navigation.replace('Login')}>
-          <Text style={styles.btnText}>Bắt đầu ngay</Text>
-        </TouchableOpacity>
+      <View style={styles.button}>
+        <ClickButton
+          screen={() => navigation.replace('Login')}
+          text="Bắt đầu ngay"
+          backgroundColor={global.colors.white}
+          color={global.colors.background}
+          fontSize={24}
+          height={height * 0.06}
+          width={width * 0.48}
+          radius={30}
+        />
       </View>
     </View>
   );
@@ -52,7 +59,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#01B3F1',
+    backgroundColor: global.colors.background,
   },
   Swiper: {
     height: height - 100,
@@ -60,17 +67,6 @@ const styles = StyleSheet.create({
   button: {
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#fff',
-    borderRadius: 30,
-    width: width * 0.48,
-    height: height * 0.06,
-  },
-  btnText: {
-    justifyContent: 'center',
-    alignContent: 'center',
-    fontSize: 24,
-    color: '#00B2E5',
-    textAlign: 'center',
   },
 });
 
