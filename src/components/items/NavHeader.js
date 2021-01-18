@@ -86,7 +86,8 @@ const styles = StyleSheet.create({
     titleView: {
         display: 'flex',
         flex: 8,
-        justifyContent: 'center'
+        justifyContent: 'center',
+        paddingLeft: theme.SIZES.BASES * 8
     },
     right: {
         display: 'flex',

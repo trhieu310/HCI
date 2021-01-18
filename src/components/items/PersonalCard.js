@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
     personalCard: {
         minHeight: 120,
         backgroundColor: '#52BEE5',
+        marginBottom: 10
     },
     imageBackground: {
         flex: 1,
