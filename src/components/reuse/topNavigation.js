@@ -8,7 +8,6 @@ const {height} = Dimensions.get('window');
 const TopNavigation = ({navigation, screen, name, icon}) => {
   return (
     <View style={styles.container}>
-      <View style={styles.line} />
       <View style={styles.header}>
         <View style={styles.backbtn}>
           <ClickButton screen={screen} image={icon} width={20} height={20} />
@@ -24,21 +23,16 @@ const styles = StyleSheet.create({
   container: {
     height: height * 0.08,
   },
-  line: {
-    flex: 18,
-    backgroundColor: global.colors.topline_background,
-  },
   header: {
     paddingTop: 10,
     alignContent: 'center',
     flex: 82,
     alignItems: 'baseline',
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
     backgroundColor: global.colors.backgroundColor,
   },
   backbtn: {
-    paddingLeft: 20,
     alignItems: 'flex-start',
   },
   name: {
