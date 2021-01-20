@@ -14,11 +14,11 @@ const Summary = ({navigation, route}) => {
                 </View>
                 <View style={styles.viewTopChild}>
                     <Text style={styles.textTop}>13</Text>
-                    <Text style={styles.textTopDetail}>Từ đã thuộc</Text>
+                    <Text style={styles.textTopDetail}>Từ chưa thuộc</Text>
                 </View>
                 <View style={styles.viewTopChild}>
                     <Text style={styles.textTop}>13</Text>
-                    <Text style={styles.textTopDetail}>Từ đã thuộc</Text>
+                    <Text style={styles.textTopDetail}>Chủ đề đã học</Text>
                 </View>
             </View>
             <View style={styles.viewBtn}>
@@ -34,9 +34,9 @@ const Summary = ({navigation, route}) => {
                 <TouchableOpacity style={styles.btnBot}>
                     <Text style={styles.textBtnBot}>Học bài mới</Text>
                 </TouchableOpacity>
-                <Text style={styles.textEndBot}>Hoặc</Text>
+                <Text style={styles.textEndBot}>-- Hoặc --</Text>
                 <TouchableOpacity style={styles.btnBot}>
-                    <Text style={styles.textBtnBot}>Học bài mới</Text>
+                    <Text style={styles.textBtnBot}>Xem tất cả chủ để</Text>
                 </TouchableOpacity>
             </View>
         </View>
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
         flex: 1
     },
     btn: {
-        width: 250,
+        width: 300,
         height: 45,
         borderRadius: 23,
         justifyContent: 'center',
@@ -89,15 +89,35 @@ const styles = StyleSheet.create({
     viewBot: {
         flex: 6,
         alignItems: 'center',
-        justifyContent: 'center'
+        marginTop: 10
     },
     viewImage: {},
     imageBot: {
         width: 46,
         height: 46
     },
-    textBot: {},
-    btnBot: {},
-    textBtnBot: {},
-    textEndBot: {}
+    textBot: {
+        marginVertical: 15,
+        fontWeight: 'bold',
+        fontSize: 20
+    },
+    btnBot: {
+        width: 250, 
+        alignItems: 'center',
+        marginBottom: 15,
+        height: 45,
+        borderRadius: 23,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: theme.COLOR.YELLOW
+    },
+    textBtnBot: {
+        fontSize: 18,
+        color: theme.COLOR.WHITE
+    },
+    textEndBot: {
+        marginBottom: 5,
+        fontSize: 15,
+        fontWeight: 'bold'
+    }
 })
