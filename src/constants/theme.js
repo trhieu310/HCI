@@ -18,5 +18,6 @@ exports.COLOR = {
   BROWN: '#664300',
   LIGHT_YELLOW: '#FFFF00',
   GRAY: '#999',
-  LIGHT_GRAY: '#ccc'
+  LIGHT_GRAY: '#ccc',
+  BLUE: '#00B2E5'
 };
