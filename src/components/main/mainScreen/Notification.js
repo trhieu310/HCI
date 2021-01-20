@@ -5,7 +5,7 @@ import NavHeader from '../../items/NavHeader';
 const Notification = ({navigation, route}) => {
   return (
     <View style={styles.container}>
-      <NavHeader 
+      <NavHeader
         back
         title="Thông báo"
         navigation={navigation}
@@ -23,11 +23,11 @@ const Notification = ({navigation, route}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#52BEE5'
+    backgroundColor: '#52BEE5',
   },
   content: {
     flex: 1,
-  }
+  },
 });
 
 export default Notification;
