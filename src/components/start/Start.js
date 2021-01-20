@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  TouchableOpacity,
-  View,
-  StyleSheet,
-  Dimensions,
-  Text,
-} from 'react-native';
+import {View, StyleSheet, Dimensions} from 'react-native';
 import Swiper from 'react-native-swiper';
 
 import ClickButton from '../reuse/clickButton';

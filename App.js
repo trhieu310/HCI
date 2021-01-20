@@ -10,6 +10,7 @@ import Login from './src/components/login/Login';
 import Main from './src/components/main/Main';
 import * as theme from './src/constants/theme';
 import MenuPersonal from './src/components/main/mainScreen/MenuPersonal';
+import BestSell from './src/components/main/mainScreen/LibraryScreen/BestSelling';
 
 StatusBar.setHidden(true);
 
@@ -55,6 +56,11 @@ const MainStack = () => {
             <AccStack.Screen
               name="MenuPersonal"
               component={MenuPersonal}
+              options={{headerShown: false}}
+            />
+            <AccStack.Screen
+              name="BestSell"
+              component={BestSell}
               options={{headerShown: false}}
             />
           </AccStack.Navigator>

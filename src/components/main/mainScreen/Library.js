@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, Button} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
 import NavHeader from '../../items/NavHeader';
 
@@ -13,7 +13,10 @@ const Library = ({navigation, route}) => {
         route={route}
         user
       />
-
+      <Button
+        title="gotosell"
+        onPress={(route) => navigation.navigate('BestSelling')}
+      />
       <ScrollView style={styles.content}>
         <Text>Thư viện</Text>
       </ScrollView>
