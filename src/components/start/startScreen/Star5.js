@@ -28,13 +28,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    paddingTop: 15,
+    paddingTop: height * 0.018,
     fontSize: 20,
     color: '#fff',
     textAlign: 'center',
   },
   intro: {
-    marginTop: 100,
+    marginTop: height * 0.12,
     justifyContent: 'center',
     alignItems: 'center',
     width: width * 0.73,
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   viewText: {
-    paddingTop: 90,
+    paddingTop: height * 0.11,
   },
   botText: {
     alignItems: 'center',
