@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     flex: 1,
     maxWidth: 45,
     height: 45,
-    borderRadius: 20,
+    borderRadius: 23,
     borderColor: '#fff',
     borderWidth: 1,
     marginHorizontal: 5,

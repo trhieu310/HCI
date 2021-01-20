@@ -15,4 +15,8 @@ exports.COLOR = {
   TOMATO: '#FD2905',
   ORANGE: '#FFAB00',
   LIGHT_BLUE: '#48C7F4',
+  BROWN: '#664300',
+  LIGHT_YELLOW: '#FFFF00',
+  GRAY: '#999',
+  LIGHT_GRAY: '#ccc'
 };

@@ -88,6 +88,7 @@ const Main = ({navigation}) => {
             open: config,
             close: config,
           },
+          tabBarBadge: 0,
         }}
         component={Noti}
       />
@@ -122,6 +123,7 @@ const Main = ({navigation}) => {
             open: config,
             close: config,
           },
+          tabBarBadge: 2
         }}
         component={Missions}
       />

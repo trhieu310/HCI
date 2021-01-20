@@ -1,12 +1,13 @@
 import React from 'react';
 import {View, Text, StyleSheet, ScrollView} from 'react-native';
 import NavHeader from '../../items/NavHeader';
+import * as theme from '../../../constants/theme'
+import NotificationButton from '../../items/Notifications/NotificationButton';
 
 const Notification = ({navigation, route}) => {
   return (
     <View style={styles.container}>
       <NavHeader
-        back
         title="Thông báo"
         navigation={navigation}
         route={route}
@@ -14,7 +15,7 @@ const Notification = ({navigation, route}) => {
       />
 
       <ScrollView style={styles.content}>
-        <Text>Notification</Text>
+        <NotificationButton />
       </ScrollView>
     </View>
   );
@@ -23,7 +24,7 @@ const Notification = ({navigation, route}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#52BEE5',
+    backgroundColor: theme.COLOR.WHITE,
   },
   content: {
     flex: 1,
