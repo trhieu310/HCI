@@ -42,7 +42,7 @@ const Account = ({navigation, route}) => {
         right
         user
       />
-      <ScrollView style={styles.content}>
+      <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
         <PersonalCard />
         {renderMainButton()}
       </ScrollView>

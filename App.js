@@ -11,6 +11,8 @@ import Main from './src/components/main/Main';
 import * as theme from './src/constants/theme';
 import MenuPersonal from './src/components/main/mainScreen/MenuPersonal';
 import BestSell from './src/components/main/mainScreen/LibraryScreen/BestSelling';
+import StartLearn from './src/components/main/learn/StartLearn';
+import NavHeader from './src/components/items/NavHeader';
 
 StatusBar.setHidden(true);
 
@@ -66,6 +68,18 @@ const MainStack = () => {
           </AccStack.Navigator>
         )}
       </Stack.Screen>
+      <Stack.Screen 
+        name='StartLearn'
+        component={StartLearn}
+        options={{header: ({navigation, route}) => {
+          return <NavHeader 
+                    back
+                    title="LET'S GO"
+                    navigation={navigation}
+                    route={route}
+                />
+        }}}
+      />
     </Stack.Navigator>
   );
 };

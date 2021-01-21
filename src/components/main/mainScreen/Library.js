@@ -1,24 +1,50 @@
 import React from 'react';
 import {View, Text, StyleSheet, Button} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
+import LibraryButton from '../../items/Libraries/LibraryButton';
+import LibraryHeader from '../../items/Libraries/LibraryHeader';
 import NavHeader from '../../items/NavHeader';
+import {ListLibraryButton} from '../../../constants/listLibraryButton';
 
 const Library = ({navigation, route}) => {
+  const renderLibraryButton = () => {
+    if (ListLibraryButton.length > 0) {
+      var rs = null;
+      rs = ListLibraryButton.map((btn) => {
+        return (
+          <LibraryButton
+            key={btn.title}
+            title={btn.title}
+            icon={btn.icon}
+            navigation={navigation}
+            route={route}
+            to={btn.to}
+            bgColor={btn.bgColor}
+          />
+        );
+      });
+      return <View>{rs}</View>;
+    }
+    return null;
+  };
+
   return (
     <View style={styles.container}>
       <NavHeader
-        back
-        title="Thư viện"
+        menu
+        title="Thư viện VOCA"
         navigation={navigation}
         route={route}
         user
+        right
       />
       <Button
         title="gotosell"
         onPress={(route) => navigation.navigate('BestSelling')}
       />
       <ScrollView style={styles.content}>
-        <Text>Thư viện</Text>
+        <LibraryHeader />
+        {renderLibraryButton()}
       </ScrollView>
     </View>
   );
