@@ -15,22 +15,27 @@ const Course = ({logo, courseScreen, actSetting, title, content, bottext}) => {
   return (
     <TouchableOpacity onPress={courseScreen}>
       <View style={styles.container}>
-        <ImageBackground source={logo} style={styles.logo}>
-          <TouchableOpacity onPress={actSetting}>
-            <Image
-              source={require('../../Icons/setting_icon.png')}
-              style={styles.icon}
-            />
-          </TouchableOpacity>
-        </ImageBackground>
+        <View style={styles.header}>
+          <ImageBackground
+            source={logo}
+            resizeMode={'contain'}
+            style={styles.logo}>
+            <TouchableOpacity onPress={actSetting}>
+              <Image
+                source={require('../../Icons/setting_icon.png')}
+                style={styles.icon}
+              />
+            </TouchableOpacity>
+          </ImageBackground>
+        </View>
         <View style={styles.content}>
           <Text styles={styles.title}>{title}</Text>
-          <Text style={styles.textContent}>{content}</Text>
+          <Text numberOfLines={5} style={styles.textContent}>
+            {content}
+          </Text>
         </View>
         <View style={styles.bottom}>
-          <Text numberOfLines={5} style={styles.textContent}>
-            {bottext}
-          </Text>
+          <Text style={styles.textContent}>{bottext}</Text>
         </View>
       </View>
     </TouchableOpacity>
@@ -50,21 +55,24 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.8,
     shadowRadius: 2,
     elevation: 1,
-    marginLeft: 5,
-    marginRight: 5,
-    marginTop: 10,
+    marginVertical: height * 0.02,
+  },
+  header: {
+    height: height * 0.19,
   },
   logo: {
-    flex: 4.5,
+    flex: 1,
   },
   icon: {
     marginRight: width * 0.02,
     marginTop: height * 0.02,
-    maxWidth: 25,
-    maxHeight: 25,
+    width: width * 0.06,
+    height: width * 0.06,
+    borderRadius: (width * 0.06) / 2,
   },
   content: {
-    flex: 4.4,
+    flex: 1,
+    marginHorizontal: width * 0.07,
   },
   title: {
     color: '#4373ED',
@@ -77,8 +85,11 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
   bottom: {
+    flex: 1,
     backgroundColor: '#D7D7D7',
-    flex: 1.1,
+    height: height * 0.05,
+    marginBottom: 0,
+    paddingBottom: 0,
   },
 });
 

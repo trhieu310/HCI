@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   viewTitle: {
-    paddingTop: 15,
+    paddingTop: height * 0.018,
   },
   title: {
     fontSize: 20,
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   intro: {
-    marginTop: 75,
+    marginTop: height * 0.09,
     justifyContent: 'center',
     alignItems: 'center',
     width: width * 0.73,
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   viewText: {
-    paddingTop: 70,
+    paddingTop: height * 0.085,
   },
   botText: {
     alignItems: 'center',

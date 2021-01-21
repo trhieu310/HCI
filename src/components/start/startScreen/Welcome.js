@@ -22,12 +22,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
   },
-  star1: {
-    height: 15,
-    width: 15,
-    paddingTop: 20,
-    paddingLeft: 10,
-  },
   voca: {
     color: '#fff',
     fontSize: 64,
@@ -39,12 +33,12 @@ const styles = StyleSheet.create({
   image: {
     width: width * 0.73,
     height: height * 0.36,
-    marginTop: 50,
+    marginTop: height * 0.06,
     justifyContent: 'center',
     alignItems: 'center',
   },
   botText: {
-    marginTop: 50,
+    marginTop: height * 0.06,
     color: '#fff',
     fontSize: 36,
     fontWeight: 'bold',

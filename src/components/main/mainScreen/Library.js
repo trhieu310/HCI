@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, Button} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
 import LibraryButton from '../../items/Libraries/LibraryButton';
 import LibraryHeader from '../../items/Libraries/LibraryHeader';
@@ -38,7 +38,10 @@ const Library = ({navigation, route}) => {
         user
         right
       />
-
+      <Button
+        title="gotosell"
+        onPress={(route) => navigation.navigate('BestSelling')}
+      />
       <ScrollView style={styles.content}>
         <LibraryHeader />
         {renderLibraryButton()}

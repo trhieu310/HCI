@@ -38,13 +38,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    paddingTop: 15,
+    paddingTop: height * 0.018,
     fontSize: 20,
     color: '#fff',
     textAlign: 'center',
   },
   intro: {
-    marginTop: 100,
+    marginTop: height * 0.12,
     justifyContent: 'center',
     alignItems: 'center',
     width: width * 0.73,
@@ -53,9 +53,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   intro2: {
-    height: 3,
-    width: 10,
-    marginTop: -300,
+    height: width * 0.07,
+    width: width * 0.07,
+    marginTop: height * -0.3,
     flexDirection: 'row',
     alignItems: 'baseline',
     justifyContent: 'center',
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   viewText: {
-    paddingTop: 90,
+    paddingTop: height * 0.1,
   },
   botText: {
     alignItems: 'center',
