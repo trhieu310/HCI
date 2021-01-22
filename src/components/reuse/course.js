@@ -88,8 +88,8 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#D7D7D7',
     height: height * 0.05,
-    marginBottom: 0,
-    paddingBottom: 0,
+    position: 'absolute',
+    bottom: 0,
   },
 });
 

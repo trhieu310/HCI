@@ -30,7 +30,7 @@ const KnowWord = ({navigation, word1, word2, word3, number}) => {
           <TouchableOpacity style={styles.btn1}>
             <Text style={styles.text}>Biết</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.btn22}>
+          <TouchableOpacity style={styles.btn2}>
             <Text style={styles.text}>Không biết</Text>
           </TouchableOpacity>
         </View>
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   body: {
-    flex: 1,
+    height: height * 0.63,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#DDDDDD',
@@ -55,6 +55,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: '#fff',
   },
   image: {
     width: width * 0.12,
@@ -73,9 +74,16 @@ const styles = StyleSheet.create({
   },
   bottom: {
     height: height * 0.17,
-    flex: 1,
+    width: width,
     position: 'absolute',
     bottom: 0,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+  },
+  question: {
+    fontSize: 24,
+    paddingBottom: height * 0.024,
   },
   btn: {
     flexDirection: 'row',
