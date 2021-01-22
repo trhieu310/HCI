@@ -23,7 +23,7 @@ const LibraryButton = ({
       ]}
       onPress={() => navigation.navigate(to !== '' ? to : 'Personal')}>
       <View style={styles.viewIcon}>
-        <Image style={styles.icon} source={icon ? icon : {iconLearningSet}} />;
+        <Image style={styles.icon} source={icon ? icon : iconLearningSet} />
       </View>
       <View style={styles.viewText}>
         <Text style={styles.text}>{title ? title : 'Title'}</Text>

@@ -1,12 +1,13 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import TopicButton from '../../../items/StartLearn/TopicButton';
 
 const Topic = () => {
-  return (
-    <View>
-      <Text>Chủ đề</Text>
-    </View>
-  );
+    return (
+        <ScrollView style={styles.container}>
+            <TopicButton />
+        </ScrollView>
+    );
 };
 
 export default Topic;

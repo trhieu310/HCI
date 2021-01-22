@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
+    backgroundColor: theme.COLOR.WHITE
   },
   viewTop: {
     flex: 2,
@@ -62,6 +63,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderBottomColor: theme.COLOR.WHITE,
     borderTopColor: theme.COLOR.WHITE,
+    paddingVertical: 10
   },
   textTop: {
     fontWeight: 'bold',
@@ -81,10 +83,16 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: theme.COLOR.LIGHT_YELLOW,
+    shadowColor: 'rgba(0, 0, 0, 0.1)',
+    shadowOpacity: 0.8,
+    elevation: 3,
+    shadowRadius: 3 ,
+    shadowOffset : { width: 1, height: 13},
   },
   textBtn: {
-    color: theme.COLOR.ORANGE,
-    fontSize: 16,
+    color: theme.COLOR.RED,
+    fontSize: 18,
+    fontWeight: 'bold'
   },
   viewBot: {
     flex: 6,
@@ -109,10 +117,16 @@ const styles = StyleSheet.create({
     borderRadius: 23,
     justifyContent: 'center',
     backgroundColor: theme.COLOR.YELLOW,
+    shadowColor: 'rgba(0, 0, 0, 0.1)',
+    shadowOpacity: 0.8,
+    elevation: 3,
+    shadowRadius: 3 ,
+    shadowOffset : { width: 1, height: 13},
   },
   textBtnBot: {
     fontSize: 18,
     color: theme.COLOR.WHITE,
+    fontWeight: 'bold'
   },
   textEndBot: {
     marginBottom: 5,

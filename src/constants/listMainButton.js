@@ -10,7 +10,7 @@ import logout from '../Icons/icon_signout.png';
 exports.ListMainButton = [
   {
     title: 'Nâng cấp tài khoản VOCA.VIP',
-    to: null,
+    to: 'StartLearn',
     bgColor: theme.COLOR.YELLOW,
     iconBg: theme.COLOR.WHITE,
     right: '',
@@ -19,7 +19,7 @@ exports.ListMainButton = [
   },
   {
     title: 'Bộ từ đang học',
-    to: 'StartLearn',
+    to: 'BestSell',
     bgColor: theme.COLOR.WHITE,
     iconBg: theme.COLOR.PRIMARY,
     right: '3',
