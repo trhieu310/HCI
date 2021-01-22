@@ -1,13 +1,23 @@
 import React from 'react';
-import {View, Image, Text, StyleSheet, Dimensions} from 'react-native';
+import {
+  View,
+  Button,
+  Image,
+  ImageBackground,
+  Text,
+  StyleSheet,
+  Dimensions,
+} from 'react-native';
 import * as theme from '../../../constants/theme';
+import BackCard from '../../../Icons/menu_bg.png';
 
-const {height} = Dimensions.get('window');
+const {height, width} = Dimensions.get('screen');
 
-const MenuPersonal = () => {
+const MenuPersonal = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Text>Luong Khac Tuan Anh</Text>
+      <Button title="Go back" onPress={() => navigation.goBack()} />
     </View>
   );
 };

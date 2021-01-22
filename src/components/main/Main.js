@@ -123,7 +123,7 @@ const Main = ({navigation}) => {
             open: config,
             close: config,
           },
-          tabBarBadge: 2
+          tabBarBadge: 2,
         }}
         component={Missions}
       />

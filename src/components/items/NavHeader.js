@@ -69,7 +69,18 @@ const NavHeader = ({
       );
     }
     return (
-      <View style={[styles.titleView, !back || !menu && !right ? {justifyContent: 'center', alignItems: 'center', paddingLeft: 0, paddingRight: theme.SIZES.BASES} : null]}>
+      <View
+        style={[
+          styles.titleView,
+          !back || (!menu && !right)
+            ? {
+                justifyContent: 'center',
+                alignItems: 'center',
+                paddingLeft: 0,
+                paddingRight: theme.SIZES.BASES,
+              }
+            : null,
+        ]}>
         <Text style={styles.title}>{title ? title : 'Title'}</Text>
       </View>
     );
