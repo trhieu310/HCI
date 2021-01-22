@@ -62,6 +62,8 @@ const styles = StyleSheet.create({
   },
   logo: {
     flex: 1,
+    justifyContent: 'flex-start',
+    alignItems: 'flex-end',
   },
   icon: {
     marginRight: width * 0.02,
@@ -72,17 +74,18 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
+    height: height * 0.2,
     marginHorizontal: width * 0.07,
   },
   title: {
     color: '#4373ED',
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: 'bold',
     justifyContent: 'center',
     alignItems: 'flex-start',
   },
   textContent: {
-    fontSize: 18,
+    fontSize: 14,
   },
   bottom: {
     flex: 1,
@@ -90,6 +93,8 @@ const styles = StyleSheet.create({
     height: height * 0.05,
     position: 'absolute',
     bottom: 0,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 

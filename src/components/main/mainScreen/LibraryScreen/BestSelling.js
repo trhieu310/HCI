@@ -5,7 +5,7 @@ import Course from '../../../reuse/course';
 
 const DATA = [
   {
-    id: 1,
+    id: '1',
     title: 'LET’S GO',
     logo: require('../../../../Icons/letgo.jpg'),
     content:
@@ -13,7 +13,7 @@ const DATA = [
     bottext: '140 Từ mới',
   },
   {
-    id: 2,
+    id: '2',
     title: 'LET’S GO',
     logo: require('../../../../Icons/letgo.jpg'),
     content:
@@ -21,7 +21,7 @@ const DATA = [
     bottext: '140 Từ mới',
   },
   {
-    id: 3,
+    id: '3',
     title: 'LET’S GO',
     logo: require('../../../../Icons/letgo.jpg'),
     content:
