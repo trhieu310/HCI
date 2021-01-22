@@ -19,5 +19,5 @@ exports.COLOR = {
   LIGHT_YELLOW: '#FFFF00',
   GRAY: '#999',
   LIGHT_GRAY: '#ccc',
-  BLUE: '#00B2E5'
+  BLUE: '#00B2E5',
 };

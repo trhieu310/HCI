@@ -68,17 +68,21 @@ const MainStack = () => {
           </AccStack.Navigator>
         )}
       </Stack.Screen>
-      <Stack.Screen 
-        name='StartLearn'
+      <Stack.Screen
+        name="StartLearn"
         component={StartLearn}
-        options={{header: ({navigation, route}) => {
-          return <NavHeader 
-                    back
-                    title="LET'S GO"
-                    navigation={navigation}
-                    route={route}
-                />
-        }}}
+        options={{
+          header: ({navigation, route}) => {
+            return (
+              <NavHeader
+                back
+                title="LET'S GO"
+                navigation={navigation}
+                route={route}
+              />
+            );
+          },
+        }}
       />
     </Stack.Navigator>
   );

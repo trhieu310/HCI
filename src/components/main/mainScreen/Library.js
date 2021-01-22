@@ -38,10 +38,6 @@ const Library = ({navigation, route}) => {
         user
         right
       />
-      <Button
-        title="gotosell"
-        onPress={(route) => navigation.navigate('BestSelling')}
-      />
       <ScrollView style={styles.content}>
         <LibraryHeader />
         {renderLibraryButton()}
