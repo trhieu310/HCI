@@ -16,7 +16,7 @@ const StartLearn = ({navigation, route}) => {
       tabBarOptions={{
         activeTintColor: theme.COLOR.WHITE,
         inactiveTintColor: '#eeeeee',
-        labelStyle: {fontSize: 14, fontWeight: 'bold'},
+        labelStyle: {fontSize: 16, fontWeight: 'bold'},
         style: {backgroundColor: theme.COLOR.BLUE},
         tabStyle: {borderWidth: 1, borderColor: theme.COLOR.WHITE},
       }}>
@@ -53,5 +53,6 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
     marginVertical: 7,
     borderRadius: 35,
+    backgroundColor: theme.COLOR.WHITE
   },
 });

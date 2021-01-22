@@ -14,12 +14,15 @@ const InputText = ({placeholder}) => {
 const styles = StyleSheet.create({
   container: {
     height: height * 0.066,
+    minHeight: 55,
     width: width - width * 0.158,
-    paddingTop: 15,
+    paddingTop: 15
   },
   Input: {
     backgroundColor: '#fff',
     borderRadius: 5,
+    paddingHorizontal: 12,
+    fontSize: 16
   },
 });
 
