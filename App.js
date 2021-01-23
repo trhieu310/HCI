@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import 'react-native-gesture-handler';
 import {StatusBar} from 'react-native';
@@ -8,9 +9,8 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 import Start from './src/components/start/Start';
 import Login from './src/components/login/Login';
 import Main from './src/components/main/Main';
-import * as theme from './src/constants/theme';
 import MenuPersonal from './src/components/main/mainScreen/MenuPersonal';
-import BestSell from './src/components/main/mainScreen/LibraryScreen/BestSelling';
+import BestSelling from './src/components/main/mainScreen/LibraryScreen/BestSelling';
 import StartLearn from './src/components/main/learn/StartLearn';
 import NavHeader from './src/components/items/NavHeader';
 
@@ -61,8 +61,8 @@ const MainStack = () => {
               options={{headerShown: false}}
             />
             <AccStack.Screen
-              name="BestSell"
-              component={BestSell}
+              name="BestSelling"
+              component={BestSelling}
               options={{headerShown: false}}
             />
           </AccStack.Navigator>

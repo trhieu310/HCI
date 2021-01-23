@@ -1,7 +1,5 @@
 import React from 'react';
 import {View, StyleSheet, Text, Dimensions} from 'react-native';
-import {StackRouter} from '@react-navigation/native';
-
 import InputText from '../reuse/inputText';
 import TopNavigation from '../reuse/topNavigation';
 import VOCA from '../reuse/voca';
@@ -10,7 +8,7 @@ import ClickButton from '../reuse/clickButton';
 import createAccount from './createAccount';
 import {createStackNavigator} from '@react-navigation/stack';
 
-const {width, height} = Dimensions.get('window');
+const {width, height} = Dimensions.get('screen');
 
 const Stack = createStackNavigator();
 
@@ -65,7 +63,7 @@ const mainLogin = ({navigation}) => {
       </View>
       <View style={styles.botbtn}>
         <ClickButton
-          screen={() => navigation.push('createAccount')}
+          screen={() => navigation.navigate('createAccount')}
           text="Tạo tài khoản"
           color={global.colors.white}
           fontSize={24}
@@ -107,26 +105,27 @@ const styles = StyleSheet.create({
   },
   btn_login: {
     alignItems: 'center',
-    paddingTop: 35,
+    paddingTop: height * 0.04,
   },
   text: {
-    paddingTop: 50,
+    paddingTop: height * 0.05,
     fontSize: 20,
     color: global.colors.white,
     alignItems: 'center',
   },
   fast_login: {
-    paddingTop: 50,
+    height: height * 0.08,
+    paddingTop: height * 0.05,
     flexDirection: 'row',
     justifyContent: 'space-evenly',
-    marginLeft: 20,
-    marginRight: 20,
   },
   botbtn: {
+    height: height * 0.08,
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'flex-end',
-    marginTop: 130,
+    position: 'absolute',
+    bottom: 0,
   },
 });
 

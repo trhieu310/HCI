@@ -19,16 +19,14 @@ const ClickButton = ({
       width={width}
       height={height}
       style={[styles.container, {backgroundColor: backgroundColor}]}>
-      <TouchableOpacity
-        onPress={screen}
-        style={styles.button}>
-        {image && <View style={styles.viewIcon}>
-          <Image source={image} style={styles.icon} />
-        </View>}
+      <TouchableOpacity onPress={screen} style={styles.button}>
+        {image && (
+          <View style={styles.viewIcon}>
+            <Image source={image} style={styles.icon} />
+          </View>
+        )}
         <View style={styles.viewText}>
-          <Text style={{fontSize: fontSize, color: color}}>
-            {text}
-          </Text>
+          <Text style={{fontSize: fontSize, color: color}}>{text}</Text>
         </View>
       </TouchableOpacity>
     </View>
@@ -38,7 +36,7 @@ const ClickButton = ({
 const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   button: {
     alignItems: 'center',
@@ -49,16 +47,16 @@ const styles = StyleSheet.create({
   viewIcon: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   icon: {
-    maxWidth: 30
+    maxWidth: 30,
   },
   viewText: {
     flex: 3,
     justifyContent: 'center',
-    alignItems: 'center'
-  }
-})
+    alignItems: 'center',
+  },
+});
 
 export default ClickButton;
