@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import NavHeader from '../../../items/NavHeader';
 
-const {height, width} = Dimensions.get('window');
+const {height, width} = Dimensions.get('screen');
 
 const CountWord = ({color, text}) => {
   return (

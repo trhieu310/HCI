@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
   bottom: {
-    height: height * 0.17,
+    height: height * 0.15,
     width: width,
     position: 'absolute',
     bottom: 0,

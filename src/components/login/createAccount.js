@@ -80,16 +80,16 @@ const styles = StyleSheet.create({
   },
   btn_login: {
     alignItems: 'center',
-    paddingTop: 35,
+    paddingTop: height * 0.04,
   },
   text: {
-    paddingTop: 50,
+    paddingTop: height * 0.05,
     fontSize: 20,
     color: global.colors.white,
     alignItems: 'center',
   },
   fast_login: {
-    paddingTop: 50,
+    paddingTop: height * 0.05,
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     marginLeft: 20,
@@ -98,7 +98,8 @@ const styles = StyleSheet.create({
   botbtn: {
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 120,
+    position: 'absolute',
+    bottom: 0,
   },
 });
 

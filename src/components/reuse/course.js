@@ -29,7 +29,7 @@ const Course = ({logo, courseScreen, actSetting, title, content, bottext}) => {
           </ImageBackground>
         </View>
         <View style={styles.content}>
-          <Text styles={styles.title}>{title}</Text>
+          <Text styles={styles.tite}>{title}</Text>
           <Text numberOfLines={5} style={styles.textContent}>
             {content}
           </Text>
@@ -44,13 +44,13 @@ const Course = ({logo, courseScreen, actSetting, title, content, bottext}) => {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     width: width * 0.73,
     height: height * 0.44,
     borderWidth: 1,
-    borderRadius: 2,
-    borderColor: '#ddd',
-    borderBottomWidth: 0,
-    shadowColor: '#000',
+    borderRadius: 5,
+    borderBottomWidth: 3,
+    shadowColor: '#000000',
     shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.8,
     shadowRadius: 2,
@@ -58,10 +58,13 @@ const styles = StyleSheet.create({
     marginVertical: height * 0.02,
   },
   header: {
+    flex: 3,
+    width: width * 0.72,
     height: height * 0.19,
   },
   logo: {
     flex: 1,
+    resizeMode: 'cover',
     justifyContent: 'flex-start',
     alignItems: 'flex-end',
   },
@@ -73,16 +76,16 @@ const styles = StyleSheet.create({
     borderRadius: (width * 0.06) / 2,
   },
   content: {
-    flex: 1,
+    flex: 5,
     height: height * 0.2,
     marginHorizontal: width * 0.07,
   },
-  title: {
+  tite: {
     color: '#4373ED',
     fontSize: 18,
     fontWeight: 'bold',
     justifyContent: 'center',
-    alignItems: 'flex-start',
+    alignItems: 'center',
   },
   textContent: {
     fontSize: 14,
@@ -91,10 +94,11 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#D7D7D7',
     height: height * 0.05,
-    position: 'absolute',
-    bottom: 0,
+    width: width * 0.72,
     justifyContent: 'center',
     alignItems: 'center',
+    position: 'absolute',
+    bottom: 0,
   },
 });
 

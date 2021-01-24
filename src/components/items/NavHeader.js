@@ -53,7 +53,7 @@ const NavHeader = ({
           </View>
         );
       } else {
-        return null;
+        return <View style={styles.viewIconRight} />;
       }
     } else {
       return null;
@@ -76,7 +76,6 @@ const NavHeader = ({
             ? {
                 justifyContent: 'center',
                 alignItems: 'center',
-                paddingLeft: 0,
                 paddingRight: theme.SIZES.BASES,
               }
             : null,
@@ -105,7 +104,7 @@ const styles = StyleSheet.create({
   },
   left: {
     display: 'flex',
-    flex: 1,
+    flex: 0.7,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -113,11 +112,11 @@ const styles = StyleSheet.create({
     display: 'flex',
     flex: 8,
     justifyContent: 'center',
-    paddingLeft: theme.SIZES.BASES * 8,
+    alignItems: 'center',
   },
   right: {
     display: 'flex',
-    flex: 1,
+    flex: 1.3,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -132,11 +131,11 @@ const styles = StyleSheet.create({
     height: 20,
   },
   iconRight: {
-    maxWidth: 25,
+    width: 25,
     height: 25,
   },
   viewIconRight: {
-    maxWidth: 27,
+    width: 27,
     height: 27,
     justifyContent: 'center',
     alignItems: 'center',

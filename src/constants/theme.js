@@ -5,7 +5,7 @@ exports.SIZES = {
   LEFT_WIDTH: 52,
   RIGHT_WIDTH: 52,
   TITLE_FONT_SIZE: 22,
-  HEIGHT_BUTTON: 50
+  HEIGHT_BUTTON: 50,
 };
 
 exports.COLOR = {
@@ -21,5 +21,5 @@ exports.COLOR = {
   GRAY: '#999',
   LIGHT_GRAY: '#ccc',
   BLUE: '#00B2E5',
-  RED: '#ff2317'
+  RED: '#ff2317',
 };
