@@ -24,7 +24,8 @@ const styles = StyleSheet.create({
   container: {
     width: width * 0.36,
     height: height * 0.17,
-    marginBottom: height * 0.024,
+    // marginBottom: height * 0.024,
+    marginHorizontal: width * 0.02,
   },
   botlabel: {
     height: 0.036,

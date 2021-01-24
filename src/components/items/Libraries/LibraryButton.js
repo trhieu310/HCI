@@ -21,7 +21,9 @@ const LibraryButton = ({
           ? {backgroundColor: bgColor}
           : {backgroundColor: theme.COLOR.WHITE},
       ]}
-      onPress={() => navigation.navigate(to !== '' ? to : 'BestSelling', {title: title})}>
+      onPress={() =>
+        navigation.navigate(to !== '' ? to : 'BestSelling', {title: title})
+      }>
       <View style={styles.viewIcon}>
         <Image style={styles.icon} source={icon ? icon : iconLearningSet} />
       </View>
