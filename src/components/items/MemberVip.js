@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
   botlabel: {
     height: 0.036,
     flex: 1,
-    justifyContent: 'center`',
+    justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5CC0D',
     marginBottom: 0,
