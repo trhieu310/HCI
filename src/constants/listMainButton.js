@@ -28,7 +28,7 @@ exports.ListMainButton = [
   },
   {
     title: 'Từ vựng đã ghim',
-    to: null,
+    to: 'PinWord',
     bgColor: theme.COLOR.WHITE,
     iconBg: theme.COLOR.LIGHT_GREEN,
     right: '0',
@@ -37,7 +37,7 @@ exports.ListMainButton = [
   },
   {
     title: 'Bảng xếp hạng',
-    to: null,
+    to: 'RankList',
     bgColor: theme.COLOR.WHITE,
     iconBg: theme.COLOR.TOMATO,
     right: '',
@@ -46,7 +46,7 @@ exports.ListMainButton = [
   },
   {
     title: 'Thang trình độ',
-    to: null,
+    to: 'ElevatorArchive',
     bgColor: theme.COLOR.WHITE,
     iconBg: theme.COLOR.ORANGE,
     right: '',
