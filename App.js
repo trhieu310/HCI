@@ -18,6 +18,7 @@ import AccountManagement from './src/components/main/mainScreen/PersonalScreen/A
 import PinWord from './src/components/main/mainScreen/PersonalScreen/PinWord';
 import RankList from './src/components/main/mainScreen/PersonalScreen/RankList';
 import ElevatorArchive from './src/components/main/mainScreen/PersonalScreen/ElevatorArchive';
+import Result from './src/components/main/learn/Result';
 
 StatusBar.setHidden(true);
 
@@ -151,6 +152,22 @@ const MainStack = () => {
               <NavHeader
                 back
                 title="Thang trình độ"
+                navigation={navigation}
+                route={route}
+              />
+            );
+          },
+        }}
+      />
+      <Stack.Screen
+        name="Result"
+        component={Result}
+        options={{
+          header: ({navigation, route}) => {
+            return (
+              <NavHeader
+                back
+                title="LET'S GO"
                 navigation={navigation}
                 route={route}
               />
