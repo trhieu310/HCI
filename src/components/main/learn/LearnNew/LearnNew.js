@@ -4,17 +4,25 @@ import {TouchableOpacity} from 'react-native-gesture-handler';
 import NavHeader from '../../../items/NavHeader';
 import Swiper from 'react-native-swiper';
 import * as theme from '../../../../constants/theme';
-import Screen_1 from '../../../main/mainScreen/MeScreen/Screen_1';
-import {ListFinalTest} from '../../../../constants/listFinalTest';
+import Screen_LearnNew from '../../../reuse/Screen_LearnNew';
+import {ListLearnNew} from '../../../../constants/listLearnNew';
 
 const {height, width} = Dimensions.get('screen');
 
 const FinalTest = ({navigation, route}) => {
-  const renderListFinalTest = () => {
-    if (ListFinalTest.length > 0) {
+  const renderListLearnNew = () => {
+    if (ListLearnNew.length > 0) {
       var rs = null;
-      rs = ListFinalTest.map((btn) => {
-        return <Screen_1 key={btn.text} text={btn.text} icon={btn.icon} />;
+      rs = ListLearnNew.map((item) => {
+        return (
+          <Screen_LearnNew
+            key={item.id}
+            numstep={item.id}
+            title={item.title}
+            text={item.text}
+            icon={item.icon}
+          />
+        );
       });
       return rs;
     }
@@ -22,35 +30,27 @@ const FinalTest = ({navigation, route}) => {
   };
   return (
     <View style={styles.container}>
-      <NavHeader
-        title="BÀI KIỂM TRA TỔNG KẾT"
-        navigation={navigation}
-        back
-        right
-        user
-        style={styles.header}
-      />
+      <NavHeader title="LET'S GO" navigation={navigation} back right />
       <View style={styles.viewTop}>
-        <Text style={styles.textHightLight}>Nội dung phòng thi</Text>
-        <Text style={styles.textTop}>
-          Dưới đây là những điều cần chú ý trước khi bắt đầu kiểm tra
-        </Text>
+        <Text style={styles.textTop}>Chào mừng bạn đến chủ đề</Text>
+        <Text style={styles.textHightLight}>JOB</Text>
+        <Text style={styles.textButt}>Bạn sẽ trải qua 3 bước</Text>
       </View>
       <View style={styles.swiper}>
         <Swiper
-          activeDotColor={theme.COLOR.LIGHT_BLUE}
+          activeDotColor={theme.COLOR.WHITE}
           autoplay={false}
           loop={false}
           showPagination={true}
           direction={'row'}>
-          {renderListFinalTest()}
+          {renderListLearnNew()}
         </Swiper>
       </View>
       <View style={styles.viewButton}>
         <TouchableOpacity
           style={styles.button}
           onPress={() => navigation.navigate('KnowWord1')}>
-          <Text style={styles.textButton}>Sẵn sàng</Text>
+          <Text style={styles.textButton}>HỌC NGAY</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -60,23 +60,35 @@ const FinalTest = ({navigation, route}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: theme.COLOR.WHITE,
+    backgroundColor: '#00C5F9',
     justifyContent: 'center',
     alignItems: 'center',
   },
   viewTop: {
+    // height: height * 0.29,
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  textHightLight: {
+  title: {
     fontSize: 24,
-    color: theme.COLOR.LIGHT_BLUE,
+    color: theme.COLOR.WHITE,
   },
   textTop: {
-    fontSize: 15,
+    fontSize: 10,
+    color: theme.COLOR.WHITE,
     margin: width * 0.05,
     textAlign: 'center',
+  },
+  textButt: {
+    fontSize: 21,
+    color: theme.COLOR.WHITE,
+    textAlign: 'center',
+    height: height * 0.06,
+    borderRadius: (height * 0.06) / 2,
+    width: width * 0.78,
+    borderColor: theme.COLOR.WHITE,
+    borderWidth: 1,
   },
   swiper: {
     flex: 3,
@@ -89,7 +101,7 @@ const styles = StyleSheet.create({
   button: {
     width: 180,
     height: 50,
-    backgroundColor: theme.COLOR.LIGHT_BLUE,
+    backgroundColor: '#FFFFFF',
     borderRadius: 25,
     justifyContent: 'center',
     alignItems: 'center',
@@ -97,7 +109,7 @@ const styles = StyleSheet.create({
   textButton: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: theme.COLOR.WHITE,
+    color: '#32B2D6',
   },
 });
 export default FinalTest;
