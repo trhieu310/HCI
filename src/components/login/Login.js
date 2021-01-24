@@ -5,14 +5,9 @@ import TopNavigation from '../reuse/topNavigation';
 import VOCA from '../reuse/voca';
 import * as global from '../../constants/global';
 import ClickButton from '../reuse/clickButton';
-import createAccount from './createAccount';
-import {createStackNavigator} from '@react-navigation/stack';
-
 const {width, height} = Dimensions.get('screen');
 
-const Stack = createStackNavigator();
-
-const mainLogin = ({navigation}) => {
+const Login = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View>
@@ -26,7 +21,7 @@ const mainLogin = ({navigation}) => {
       <View style={styles.body}>
         <VOCA />
         <InputText placeholder="Email" />
-        <InputText placeholder="Password" />
+        <InputText secureTextEntry={true} placeholder="Password" />
         <View style={styles.btn_login}>
           <ClickButton
             screen={() => navigation.navigate('Main')}
@@ -63,35 +58,20 @@ const mainLogin = ({navigation}) => {
       </View>
       <View style={styles.botbtn}>
         <ClickButton
-          screen={() => navigation.navigate('createAccount')}
+          screen={() => navigation.push('CreateAccount')}
           text="Tạo tài khoản"
           color={global.colors.white}
           fontSize={24}
+          style={styles.createbtn}
         />
         <ClickButton
           text="Quên mật khẩu"
           color={global.colors.white}
           fontSize={24}
+          style={styles.createbtn}
         />
       </View>
     </View>
-  );
-};
-
-const Login = () => {
-  return (
-    <Stack.Navigator initialRouteName="Đăng nhập">
-      <Stack.Screen
-        name="Đăng nhập"
-        component={mainLogin}
-        options={{headerShown: false}}
-      />
-      <Stack.Screen
-        name="Tạo tài khoản"
-        component={createAccount}
-        options={{headerShown: false}}
-      />
-    </Stack.Navigator>
   );
 };
 
@@ -123,9 +103,11 @@ const styles = StyleSheet.create({
     height: height * 0.08,
     flexDirection: 'row',
     justifyContent: 'space-around',
-    alignItems: 'flex-end',
-    position: 'absolute',
-    bottom: 0,
+    alignItems: 'center',
+    marginVertical: height * 0.1,
+  },
+  createbtn: {
+    margin: height * 0.02,
   },
 });
 

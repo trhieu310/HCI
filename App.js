@@ -15,7 +15,11 @@ import StartLearn from './src/components/main/learn/StartLearn';
 import NavHeader from './src/components/items/NavHeader';
 import VocaVip from './src/components/main/mainScreen/LibraryScreen/VocaVip';
 import LearnNavigation from './src/components/main/learn/LearnNavigation';
+import CreateAccount from './src/components/login/createAccount';
 import AccountManagement from './src/components/main/mainScreen/PersonalScreen/AccountManagement';
+import PinWord from './src/components/main/mainScreen/PersonalScreen/PinWord';
+import RankList from './src/components/main/mainScreen/PersonalScreen/RankList';
+import ElevatorArchive from './src/components/main/mainScreen/PersonalScreen/ElevatorArchive';
 
 StatusBar.setHidden(true);
 
@@ -37,10 +41,15 @@ const StartStack = () => {
 
 const LoginStack = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator initialRouteName="Login">
       <Stack.Screen
         name="Login"
         component={Login}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="CreateAccount"
+        component={CreateAccount}
         options={{headerShown: false}}
       />
     </Stack.Navigator>
@@ -106,6 +115,54 @@ const MainStack = () => {
               <NavHeader
                 back
                 title="Quản lý tài khoản"
+                navigation={navigation}
+                route={route}
+              />
+            );
+          },
+        }}
+      />
+      <Stack.Screen
+        name="PinWord"
+        component={PinWord}
+        options={{
+          header: ({navigation, route}) => {
+            return (
+              <NavHeader
+                back
+                title="Từ vựng đã ghim"
+                navigation={navigation}
+                route={route}
+              />
+            );
+          },
+        }}
+      />
+      <Stack.Screen
+        name="RankList"
+        component={RankList}
+        options={{
+          header: ({navigation, route}) => {
+            return (
+              <NavHeader
+                back
+                title="Bảng xếp hạng"
+                navigation={navigation}
+                route={route}
+              />
+            );
+          },
+        }}
+      />
+      <Stack.Screen
+        name="ElevatorArchive"
+        component={ElevatorArchive}
+        options={{
+          header: ({navigation, route}) => {
+            return (
+              <NavHeader
+                back
+                title="Thang trình độ"
                 navigation={navigation}
                 route={route}
               />

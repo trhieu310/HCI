@@ -23,23 +23,22 @@ const PersionalButton = ({image, text}) => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    height: height * 0.085,
+    width: width,
+    height: height * 0.04,
     borderColor: '#D2D2D2',
     borderWidth: 1,
-    alignItems: 'flex-start',
+    alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
+    backgroundColor: '#000',
   },
   image: {
-    flex: 1,
-    width: width * 0.09,
-    height: width * 0.09,
-    padding: width * 0.024,
+    width: width * 0.05,
+    height: width * 0.05,
+    padding: width * 0.012,
     borderRadius: 2,
   },
   text: {
-    flex: 9,
     fontSize: 20,
     textAlign: 'left',
   },

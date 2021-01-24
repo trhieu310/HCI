@@ -24,7 +24,6 @@ const VocaVip = ({navigation, route}) => {
         route={route}
       />
       <ScrollView styles={styles.FlatList}>
-        <Text styles={styles.topText}>Hãy chọn gói từ vựng muốn học</Text>
         <Combo
           title="VOCABULARY VIP PLUS"
           subtitle="Học trong suốt  thời gian 2 năm."
