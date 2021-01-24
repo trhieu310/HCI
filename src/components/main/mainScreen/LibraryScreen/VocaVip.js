@@ -17,8 +17,12 @@ const {width, height} = Dimensions.get('window');
 const VocaVip = ({navigation, route}) => {
   return (
     <View style={styles.container}>
-      <NavHeader back title="VOCA V.I.P" navigation={navigation} route={route} />
-      <Text styles={styles.topText}>Hãy chọn gói từ vựng muốn học</Text>
+      <NavHeader
+        back
+        title="VOCA V.I.P"
+        navigation={navigation}
+        route={route}
+      />
       <ScrollView styles={styles.FlatList}>
         <Combo
           title="VOCABULARY VIP PLUS"

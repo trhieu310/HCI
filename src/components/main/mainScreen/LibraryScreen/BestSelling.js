@@ -35,14 +35,20 @@ const BestSelling = ({navigation, route}, props) => {
       logo={item.logo}
       content={item.content}
       bottext={item.bottext}
-      courseScreen={() => navigation.navigate('StartLearn')}
+      courseScreen={() => navigation.navigate('LearnNavigation')}
     />
   );
 
-  const {title} = props
+  const {title} = props;
   return (
     <View style={styles.container}>
-      <NavHeader back navigation={navigation} route={route} title={title} user />
+      <NavHeader
+        back
+        navigation={navigation}
+        route={route}
+        title={title}
+        user
+      />
       <SafeAreaView style={styles.flat}>
         <FlatList
           data={DATA}

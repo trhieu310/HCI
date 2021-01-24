@@ -19,12 +19,12 @@ import defaultAvatar from '../../Icons/default_avatar.png';
 const {width, height} = Dimensions.get('screen');
 
 const NavProgressBar = ({navigation, right, number, user, fault}) => {
-  const [modalVisible, setModalVisible] = useState(false);
+  // const [modalVisible, setModalVisible] = useState(false);
   const renderLeft = () => {
     return (
       <TouchableOpacity
         onPress={() => {
-          setModalVisible(true);
+          // setModalVisible(true);
         }}
         style={styles.left}>
         <Image source={closeImg} style={styles.iconLeft} />
@@ -67,13 +67,13 @@ const NavProgressBar = ({navigation, right, number, user, fault}) => {
   };
 
   return (
-    <View>
-      <View style={styles.navHeader}>
-        {renderLeft()}
-        {renderCenter()}
-        {renderRight()}
-      </View>
-      <Modal animationType="fade" transparent={true} visible={modalVisible}>
+    // <View>
+    <View style={styles.navHeader}>
+      {renderLeft()}
+      {renderCenter()}
+      {renderRight()}
+    </View>
+    /* <Modal animationType="fade" transparent={true} visible={modalVisible}>
         <View style={styles.container}>
           <View style={styles.modalView}>
             <View style={styles.closeicon}>
@@ -123,7 +123,7 @@ const NavProgressBar = ({navigation, right, number, user, fault}) => {
           </View>
         </View>
       </Modal>
-    </View>
+    </View> */
   );
 };
 
