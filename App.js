@@ -14,6 +14,7 @@ import BestSelling from './src/components/main/mainScreen/LibraryScreen/BestSell
 import StartLearn from './src/components/main/learn/StartLearn';
 import NavHeader from './src/components/items/NavHeader';
 import VocaVip from './src/components/main/mainScreen/LibraryScreen/VocaVip';
+import AccountManagement from './src/components/main/mainScreen/PersonalScreen/AccountManagement';
 
 StatusBar.setHidden(true);
 
@@ -83,6 +84,22 @@ const MainStack = () => {
               <NavHeader
                 back
                 title="LET'S GO"
+                navigation={navigation}
+                route={route}
+              />
+            );
+          },
+        }}
+      />
+      <Stack.Screen
+        name="AccountManagement"
+        component={AccountManagement}
+        options={{
+          header: ({navigation, route}) => {
+            return (
+              <NavHeader
+                back
+                title="Quản lý tài khoản"
                 navigation={navigation}
                 route={route}
               />
