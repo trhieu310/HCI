@@ -18,8 +18,8 @@ const VocaVip = ({navigation, route}) => {
   return (
     <View style={styles.container}>
       <NavHeader back title="VOCA V.I.P" navigation={navigation} route={route} />
+      <Text styles={styles.topText}>Hãy chọn gói từ vựng muốn học</Text>
       <ScrollView styles={styles.FlatList}>
-        <Text styles={styles.topText}>Hãy chọn gói từ vựng muốn học</Text>
         <Combo
           title="VOCABULARY VIP PLUS"
           subtitle="Học trong suốt  thời gian 2 năm."
