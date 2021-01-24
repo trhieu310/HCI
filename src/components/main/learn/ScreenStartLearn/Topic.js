@@ -66,6 +66,7 @@ const renderButton = () => {
         var rs = null
         rs = listTopic.map((button, index) => {
             return <TopicButton 
+                        key={index}
                         image={button.image}
                         title={button.title}
                         studied={button.studied}
