@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     minHeight: 55,
     width: width - width * 0.158,
     // paddingTop: 15,
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   Input: {
     backgroundColor: '#fff',
@@ -27,8 +27,8 @@ const styles = StyleSheet.create({
     shadowColor: 'rgba(0, 0, 0, 0.1)',
     shadowOpacity: 0.8,
     elevation: 2,
-    shadowRadius: 6 ,
-    shadowOffset : { width: 1, height: 13},
+    shadowRadius: 6,
+    shadowOffset: {width: 1, height: 13},
   },
 });
 
