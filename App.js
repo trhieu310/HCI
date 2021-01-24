@@ -14,6 +14,7 @@ import BestSelling from './src/components/main/mainScreen/LibraryScreen/BestSell
 import StartLearn from './src/components/main/learn/StartLearn';
 import NavHeader from './src/components/items/NavHeader';
 import VocaVip from './src/components/main/mainScreen/LibraryScreen/VocaVip';
+import LearnNavigation from './src/components/main/learn/LearnNavigation';
 import AccountManagement from './src/components/main/mainScreen/PersonalScreen/AccountManagement';
 
 StatusBar.setHidden(true);
@@ -65,6 +66,11 @@ const MainStack = () => {
             <AccStack.Screen
               name="BestSelling"
               component={BestSelling}
+              options={{headerShown: false}}
+            />
+            <AccStack.Screen
+              name="LearnNavigation"
+              component={LearnNavigation}
               options={{headerShown: false}}
             />
             <AccStack.Screen

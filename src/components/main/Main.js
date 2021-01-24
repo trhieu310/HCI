@@ -6,7 +6,6 @@ import Library from './mainScreen/Library';
 import Noti from './mainScreen/Notification';
 import Me from './mainScreen/Me';
 import Missions from './mainScreen/Missions';
-import * as theme from '../../constants/theme';
 import perImg from '../../Icons/icon_account.png';
 import libImg from '../../Icons/icon_library.png';
 import meImg from '../../Icons/icon_me.png';

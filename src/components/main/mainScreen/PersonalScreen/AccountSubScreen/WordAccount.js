@@ -24,7 +24,7 @@ const WordAccount = ({navigation, route}) => {
       let rs = null;
       rs = listVocabularyCard.map((card, index) => {
         return (
-          <VocabularyCard title={card.title} status={card.status} key={index} />;
+          <VocabularyCard title={card.title} status={card.status} key={index} />
         );
       });
       return rs;

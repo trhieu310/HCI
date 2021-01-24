@@ -12,10 +12,13 @@ import sound from '../../Icons/sound_not_play.png';
 
 const {width, height} = Dimensions.get('screen');
 
-const KnowWord = ({navigation, word1, word2, word3, number}) => {
+const KnowWord = ({navigation, word1, word2, word3, number, screen}) => {
   return (
     <View style={styles.container}>
-      <NavProgressBar back right user number={number} navigation={navigation} />
+      {/* <NavProgressBar back right user number={number} navigation={navigation} /> */}
+      <View style={styles.header}>
+        
+      </View>
       <View style={styles.body}>
         <View style={styles.border}>
           <Text style={styles.mainword}>{word1}</Text>
@@ -27,10 +30,10 @@ const KnowWord = ({navigation, word1, word2, word3, number}) => {
       <View style={styles.bottom}>
         <Text style={styles.question}>Bạn có biết từ này không?</Text>
         <View style={styles.btn}>
-          <TouchableOpacity style={styles.btn1}>
+          <TouchableOpacity style={styles.btn1} onPress={screen}>
             <Text style={styles.text}>Biết</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.btn2}>
+          <TouchableOpacity style={styles.btn2} onPress={screen}>
             <Text style={styles.text}>Không biết</Text>
           </TouchableOpacity>
         </View>
@@ -43,8 +46,19 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
+  header: {
+    height: height * 0.068,
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#00B2E5',
+    justifyContent: 'center',
+    paddingHorizontal: 0,
+    position: 'absolute',
+    top: 0,
+  }
   body: {
-    height: height * 0.63,
+    height: height * 0.62,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#DDDDDD',
@@ -73,7 +87,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
   bottom: {
-    height: height * 0.15,
+    height: height * 0.2,
     width: width,
     position: 'absolute',
     bottom: 0,

@@ -49,7 +49,7 @@ const FinalTest = ({navigation, route}) => {
       <View style={styles.viewButton}>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => navigation.navigate('KnowWord1')}>
+          onPress={() => navigation.navigate('KnowWordTest')}>
           <Text style={styles.textButton}>Sẵn sàng</Text>
         </TouchableOpacity>
       </View>
