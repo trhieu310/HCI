@@ -127,7 +127,7 @@ const KnowWord10 = ({navigation}) => {
     <KnowWord
       navigation={navigation}
       number={10}
-      screen={() => navigation.navigate('KnowWord9')}
+      screen={() => navigation.navigate('Result')}
       word1="cashier"
       word2="(nouns)"
       word3="/kæ'∫iə/"

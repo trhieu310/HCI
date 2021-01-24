@@ -10,7 +10,7 @@ export default function PersonalCard() {
           <Image source={avatarImage} size={50} style={styles.image} />
         </View>
         <View style={styles.personalDetail}>
-          <Text style={styles.name}>Trần Trọng X</Text>
+          <Text style={styles.name}>My Linh</Text>
           <Text style={styles.point}>2500 từ đã thuộc</Text>
         </View>
       </ImageBackground>
