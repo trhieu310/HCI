@@ -55,7 +55,7 @@ exports.ListMainButton = [
   },
   {
     title: 'Quản lý tài khoản',
-    to: null,
+    to: 'AccountManagement',
     bgColor: theme.COLOR.WHITE,
     iconBg: theme.COLOR.PRIMARY,
     right: '',

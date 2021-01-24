@@ -14,12 +14,12 @@ import MemberVip from '../../../items/MemberVip';
 
 const {width, height} = Dimensions.get('window');
 
-const VocaVip = () => {
+const VocaVip = ({navigation, route}) => {
   return (
     <View style={styles.container}>
-      <NavHeader back title="VOCA V.I.P" />
-      <Text styles={styles.title}>Hãy chọn gói từ vựng muốn học</Text>
-      <ScrollView styles={styles.FlatList}>
+      <NavHeader back title="VOCA V.I.P" navigation={navigation} route={route} />
+      <FlatList styles={styles.FlatList}>
+        <Text styles={styles.topText}>Hãy chọn gói từ vựng muốn học</Text>
         <Combo
           title="VOCABULARY VIP PLUS"
           subtitle="Học trong suốt  thời gian 2 năm."
