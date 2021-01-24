@@ -35,6 +35,7 @@ const styles = StyleSheet.create({
     marginVertical: height * 0.03,
   },
   mean: {
+    color: '#3AAFCB',
     justifyContent: 'center',
     textAlign: 'center',
     fontSize: 18,
