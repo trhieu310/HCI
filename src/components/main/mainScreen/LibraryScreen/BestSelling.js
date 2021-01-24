@@ -28,7 +28,7 @@ const DATA = [
   },
 ];
 
-const BestSelling = ({navigation}) => {
+const BestSelling = ({navigation, route}) => {
   const renderItem = ({item}) => (
     <Course
       title={item.title}
@@ -38,9 +38,11 @@ const BestSelling = ({navigation}) => {
       courseScreen={() => navigation.navigate('StartLearn')}
     />
   );
+
+  const {title} = route.params
   return (
     <View style={styles.container}>
-      <NavHeader back navigation={navigation} title="Best-Selling" user />
+      <NavHeader back navigation={navigation} title={title} user />
       <SafeAreaView style={styles.flat}>
         <FlatList
           data={DATA}
