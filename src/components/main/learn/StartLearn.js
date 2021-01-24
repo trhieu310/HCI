@@ -14,7 +14,7 @@ const Stack = createStackNavigator();
 const StartLearn = ({navigation}) => {
   return (
     <Stack.Navigator initialRouteName="BestSell">
-      <Stack.Screen name="BestS ell" options={{headerShown: false}}>
+      <Stack.Screen name="BestSell" options={{headerShown: false}}>
         {() => (
           <Tab.Navigator
             style={styles.tabTop}

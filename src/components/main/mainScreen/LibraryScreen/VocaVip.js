@@ -12,10 +12,10 @@ import MemberVip from '../../../items/MemberVip';
 
 const {width, height} = Dimensions.get('window');
 
-const VocaVip = () => {
+const VocaVip = ({navigation, route}) => {
   return (
     <SafeAreaView style={styles.container}>
-      <NavHeader back title="VOCA V.I.P" />
+      <NavHeader back title="VOCA V.I.P" navigation={navigation} route={route} />
       <FlatList styles={styles.FlatList}>
         <Text styles={styles.topText}>Hãy chọn gói từ vựng muốn học</Text>
         <Combo
