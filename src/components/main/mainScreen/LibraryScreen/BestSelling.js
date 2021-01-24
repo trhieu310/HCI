@@ -28,7 +28,7 @@ const DATA = [
   },
 ];
 
-const BestSelling = ({navigation, route}) => {
+const BestSelling = ({navigation, route}, props) => {
   const renderItem = ({item}) => (
     <Course
       title={item.title}
@@ -39,7 +39,7 @@ const BestSelling = ({navigation, route}) => {
     />
   );
 
-  const {title} = route.params
+  const {title} = props
   return (
     <View style={styles.container}>
       <NavHeader back navigation={navigation} route={route} title={title} user />
