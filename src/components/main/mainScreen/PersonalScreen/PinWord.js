@@ -4,7 +4,7 @@ import {StyleSheet, Text, View} from 'react-native';
 const PinWord = () => {
   return (
     <View>
-      <Text />
+      <Text> PinWord </Text>
     </View>
   );
 };
