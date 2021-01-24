@@ -62,22 +62,24 @@ const listTopic = [
 ];
 
 const renderButton = () => {
-    if (listTopic != null) {
-        var rs = null
-        rs = listTopic.map((button, index) => {
-            return <TopicButton 
-                        key={index}
-                        image={button.image}
-                        title={button.title}
-                        studied={button.studied}
-                        forget={button.forget}
-                        lock={button.lock}
-                    />
-        })
-        return rs
-    }
-    return null
-}
+  if (listTopic != null) {
+    var rs = null;
+    rs = listTopic.map((button, index) => {
+      return (
+        <TopicButton
+          key={index}
+          image={button.image}
+          title={button.title}
+          studied={button.studied}
+          forget={button.forget}
+          lock={button.lock}
+        />
+      );
+    });
+    return rs;
+  }
+  return null;
+};
 
 const Topic = () => {
   return <ScrollView style={styles.container}>{renderButton()}</ScrollView>;

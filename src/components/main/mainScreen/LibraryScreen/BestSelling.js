@@ -39,7 +39,7 @@ const BestSelling = ({navigation, route}) => {
     />
   );
 
-  const {title} = route.params
+  const {title} = route.params;
   return (
     <View style={styles.container}>
       <NavHeader back navigation={navigation} route={route} title={title} user />
@@ -64,9 +64,7 @@ const styles = StyleSheet.create({
   flat: {
     alignItems: 'center',
   },
-  flatListStyle: {
-
-  }
+  flatListStyle: {},
 });
 
 export default BestSelling;

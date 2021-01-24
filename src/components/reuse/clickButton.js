@@ -1,6 +1,15 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {Image, View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {
+  Image,
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  Dimensions,
+} from 'react-native';
+
+const {width, height} = Dimensions.get('window');
 
 const ClickButton = ({
   screen,
@@ -14,12 +23,12 @@ const ClickButton = ({
   fontSize,
 }) => {
   return (
-    <View
-      borderRadius={radius}
-      width={width}
-      height={height}
-      style={[styles.container, {backgroundColor: backgroundColor}]}>
-      <TouchableOpacity onPress={screen} style={styles.button}>
+    <TouchableOpacity onPress={screen} style={styles.button}>
+      <View
+        borderRadius={radius}
+        width={width}
+        height={height}
+        style={[styles.container, {backgroundColor: backgroundColor}]}>
         {image && (
           <View style={styles.viewIcon}>
             <Image source={image} style={styles.icon} />
@@ -28,8 +37,8 @@ const ClickButton = ({
         <View style={styles.viewText}>
           <Text style={{fontSize: fontSize, color: color}}>{text}</Text>
         </View>
-      </TouchableOpacity>
-    </View>
+      </View>
+    </TouchableOpacity>
   );
 };
 
@@ -37,6 +46,8 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
     alignItems: 'center',
+    flexDirection: 'row',
+    marginVertical: height * 0.01,
   },
   button: {
     alignItems: 'center',

@@ -1,14 +1,14 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import React from 'react';
+import {StyleSheet, Text, View} from 'react-native';
 
 const RankList = () => {
-    return (
-        <View>
-            <Text></Text>
-        </View>
-    )
-}
+  return (
+    <View>
+      <Text />
+    </View>
+  );
+};
 
-export default RankList
+export default RankList;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});

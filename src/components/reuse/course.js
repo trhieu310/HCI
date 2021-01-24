@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     flex: 3,
     width: width * 0.72,
     height: height * 0.19,
-    marginTop: 10
+    marginTop: 10,
   },
   logo: {
     flex: 1,
