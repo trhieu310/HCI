@@ -47,6 +47,8 @@ const BestSelling = ({navigation}) => {
           renderItem={renderItem}
           keyExtractor={(item) => item.title}
           nestedScrollEnabled={true}
+          style={styles.flatListStyle}
+          showsVerticalScrollIndicator={false}
         />
       </SafeAreaView>
     </View>
@@ -60,6 +62,9 @@ const styles = StyleSheet.create({
   flat: {
     alignItems: 'center',
   },
+  flatListStyle: {
+
+  }
 });
 
 export default BestSelling;

@@ -19,7 +19,7 @@ exports.ListMainButton = [
   },
   {
     title: 'Bộ từ đang học',
-    to: 'BestSell',
+    to: 'BestSelling',
     bgColor: theme.COLOR.WHITE,
     iconBg: theme.COLOR.PRIMARY,
     right: '3',
