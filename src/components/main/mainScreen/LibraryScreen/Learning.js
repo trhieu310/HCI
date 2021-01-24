@@ -22,10 +22,10 @@ const CountWord = ({color, text}) => {
   );
 };
 
-const Learning = ({navigation}) => {
+const Learning = ({navigation, route}) => {
   return (
     <View style={styles.container}>
-      <NavHeader back title="Bộ từ đang học" navigation={navigation} />
+      <NavHeader back title="Bộ từ đang học" route={route} navigation={navigation} />
       <TouchableOpacity>
         <View style={styles.header}>
           <ImageBackground

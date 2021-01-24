@@ -42,7 +42,7 @@ const BestSelling = ({navigation, route}) => {
   const {title} = route.params
   return (
     <View style={styles.container}>
-      <NavHeader back navigation={navigation} title={title} user />
+      <NavHeader back navigation={navigation} route={route} title={title} user />
       <SafeAreaView style={styles.flat}>
         <FlatList
           data={DATA}
