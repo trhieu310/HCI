@@ -93,7 +93,7 @@ const NavProgressBar = ({navigation, right, number, user, fault}) => {
                 Quá trình học bài sẽ không được lưu lại đến khi bạn học xong
               </Text>
               <View style={styles.bottom}>
-                <TouchableHighlight
+                <TouchableOpacity
                   style={{
                     ...styles.openButton,
                     backgroundColor: '#F25A5A',
@@ -105,8 +105,8 @@ const NavProgressBar = ({navigation, right, number, user, fault}) => {
                     setModalVisible(!modalVisible);
                   }}>
                   <Text style={styles.textStyle}>Hủy</Text>
-                </TouchableHighlight>
-                <TouchableHighlight
+                </TouchableOpacity>
+                <TouchableOpacity
                   style={{
                     ...styles.openButton,
                     backgroundColor: '#2196F3',
@@ -117,7 +117,7 @@ const NavProgressBar = ({navigation, right, number, user, fault}) => {
                     setModalVisible(!modalVisible);
                   }}>
                   <Text style={styles.textStyle}>Chắc chắn</Text>
-                </TouchableHighlight>
+                </TouchableOpacity>
               </View>
             </View>
           </View>

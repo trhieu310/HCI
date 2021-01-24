@@ -64,9 +64,7 @@ const styles = StyleSheet.create({
   flat: {
     alignItems: 'center',
   },
-  flatListStyle: {
-
-  }
+  flatListStyle: {},
 });
 
 export default BestSelling;

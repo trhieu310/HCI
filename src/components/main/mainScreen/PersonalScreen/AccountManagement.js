@@ -55,6 +55,6 @@ const AccountManagement = ({navigation, route}) => {
     )
 }
 
-export default AccountManagement
+export default AccountManagement;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});

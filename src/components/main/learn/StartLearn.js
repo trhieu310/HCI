@@ -6,6 +6,7 @@ import Summary from './ScreenStartLearn/Summary';
 import Rank from './ScreenStartLearn/Rank';
 import Topic from './ScreenStartLearn/Topic';
 import FinalTest from '../../main/learn/FinalTest/FinalTest';
+import LearnNew from '../../main/learn/LearnNew/LearnNew';
 import * as theme from '../../../constants/theme';
 
 const Tab = createMaterialTopTabNavigator();
@@ -54,7 +55,11 @@ const StartLearn = ({navigation}) => {
         name="FinalTest"
         component={FinalTest}
         options={{headerShown: false}}
-        style={styles.FinalTest}
+      />
+      <Stack.Screen
+        name="LearnNew"
+        component={LearnNew}
+        options={{headerShown: false}}
       />
     </Stack.Navigator>
   );

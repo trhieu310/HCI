@@ -85,7 +85,7 @@ const Summary = ({navigation, route}) => {
                     height: height * 0.04,
                     marginVertical: height * 0.012,
                   }}
-                  onPress={() => {
+                  onPress={(route) => {
                     setModalVisible(!modalVisible);
                     navigation.navigate('FinalTest');
                   }}>
@@ -100,6 +100,7 @@ const Summary = ({navigation, route}) => {
                   }}
                   onPress={() => {
                     setModalVisible(!modalVisible);
+                    navigation.navigate('LearnNew');
                   }}>
                   <Text style={styles.textStyle}>Học bài mới</Text>
                 </TouchableOpacity>
@@ -241,6 +242,7 @@ const styles = StyleSheet.create({
     margin: width * 0.05,
     textAlign: 'center',
     fontSize: 18,
+    paddingHorizontal: width * 0.05,
   },
   openButton: {
     backgroundColor: '#8989ab',
