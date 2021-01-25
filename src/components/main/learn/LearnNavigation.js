@@ -4,6 +4,7 @@ import FinalTest from '../../main/learn/FinalTest/FinalTest';
 import LearnNew from '../../main/learn/LearnNew/LearnNew';
 import KnowWordTest from '../../main/learn/FirstTest/KnowWordTest';
 import StartLearn from './StartLearn';
+import Result from '../../main/learn/Result';
 
 const Stack = createStackNavigator();
 
@@ -28,6 +29,11 @@ const LearnNavigation = ({navigation}) => {
       <Stack.Screen
         name="KnowWordTest"
         component={KnowWordTest}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Result"
+        component={Result}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

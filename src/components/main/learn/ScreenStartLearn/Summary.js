@@ -100,7 +100,7 @@ const Summary = ({navigation, route}) => {
                   }}
                   onPress={() => {
                     setModalVisible(!modalVisible);
-                    navigation.navigate('LearnNew');
+                    navigation.navigate('FinalTest');
                   }}>
                   <Text style={styles.textStyle}>Học bài mới</Text>
                 </TouchableOpacity>

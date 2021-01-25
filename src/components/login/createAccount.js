@@ -23,7 +23,7 @@ const createAccount = ({navigation}) => {
         <VOCA />
         <InputText placeholder="Name" />
         <InputText placeholder="Email" />
-        <InputText placeholder="Password" />
+        <InputText ssecureTextEntry={true} placeholder="Password" />
         <View style={styles.btn_login}>
           <ClickButton
             screen={() => Alert.alert('Đăng ký thành công')}
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
   fast_login: {
     paddingTop: height * 0.05,
     flexDirection: 'row',
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-between',
     marginLeft: 20,
     marginRight: 20,
   },
@@ -100,6 +100,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     position: 'absolute',
     bottom: 0,
+    margin: height * 0.02,
   },
 });
 

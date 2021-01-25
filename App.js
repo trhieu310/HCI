@@ -15,6 +15,7 @@ import StartLearn from './src/components/main/learn/StartLearn';
 import NavHeader from './src/components/items/NavHeader';
 import VocaVip from './src/components/main/mainScreen/LibraryScreen/VocaVip';
 import LearnNavigation from './src/components/main/learn/LearnNavigation';
+import CreateAccount from './src/components/login/createAccount';
 import AccountManagement from './src/components/main/mainScreen/PersonalScreen/AccountManagement';
 import PinWord from './src/components/main/mainScreen/PersonalScreen/PinWord';
 import RankList from './src/components/main/mainScreen/PersonalScreen/RankList';
@@ -41,10 +42,15 @@ const StartStack = () => {
 
 const LoginStack = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator initialRouteName="Login">
       <Stack.Screen
         name="Login"
         component={Login}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="CreateAccount"
+        component={CreateAccount}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

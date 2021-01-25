@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     height: height * 0.066,
     minHeight: 55,
     width: width - width * 0.158,
-    // paddingTop: 15,
+    margin: height * 0.006,
     justifyContent: 'center',
   },
   Input: {
