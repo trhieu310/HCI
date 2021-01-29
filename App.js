@@ -174,18 +174,6 @@ const MainStack = () => {
       <Stack.Screen
         name="Result"
         component={Result}
-        options={{
-          header: ({navigation, route}) => {
-            return (
-              <NavHeader
-                back
-                title="LET'S GO"
-                navigation={navigation}
-                route={route}
-              />
-            );
-          },
-        }}
       />
     </Stack.Navigator>
   );

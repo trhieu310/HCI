@@ -36,7 +36,7 @@ const KnowWord3 = ({navigation}) => {
     <KnowWord
       navigation={navigation}
       number={3}
-      screen={() => navigation.navigate('KnowWord4')}
+      screen={(route) => navigation.navigate('KnowWord4')}
       word1="museum"
       word2="(nouns)"
       word3="/mju:'ziəm/"
@@ -122,12 +122,13 @@ const KnowWord9 = ({navigation}) => {
   );
 };
 
-const KnowWord10 = ({navigation}) => {
+const KnowWord10 = ({navigation, route}) => {
   return (
     <KnowWord
       navigation={navigation}
+      route={route}
       number={10}
-      screen={() => navigation.navigate('Result')}
+      screen={(route) => navigation.navigate('Result', {title: "LET'S GO"})}
       word1="cashier"
       word2="(nouns)"
       word3="/kæ'∫iə/"
@@ -135,7 +136,7 @@ const KnowWord10 = ({navigation}) => {
   );
 };
 
-const KnowWordTest = ({navigation}) => {
+const KnowWordTest = ({navigation, route}) => {
   return (
     <Stack.Navigator initialRouteName="KnowWord1">
       <Stack.Screen
