@@ -10,10 +10,23 @@ import * as theme from '../../../constants/theme';
 import NavHeader from '../../items/NavHeader';
 import ResultRank from './Result/ResultRank';
 
-const Result = ({navigation}) => {
+const Result = ({navigation, route}) => {
   return (
     <Stack.Navigator initialRouteName="ResultPage">
-      <Stack.Screen name="Result" options={{headerShown: false}}>
+      <Stack.Screen name="Result"
+        options={{
+          header: ({navigation, route}) => {
+            return (
+              <NavHeader
+                // back
+                title="LET'S GO"
+                navigation={navigation}
+                route={route}
+              />
+            );
+          },
+        }}
+      >
         {() => (
           <Tab.Navigator
             style={styles.tabTop}

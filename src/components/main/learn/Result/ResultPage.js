@@ -4,8 +4,12 @@ import ResultPageCard from '../../../items/ResultPageCard';
 import * as theme from '../../../../constants/theme';
 import ClickButton from '../../../reuse/clickButton';
 import menubg from '../../../../Icons/menu_bg.png';
+import NavHeader from '../../../items/NavHeader';
+import story from '../../../../Icons/story.png'
+import wordUnknown from '../../../../Icons/word_unknow_icon.png'
+import tick from '../../../../Icons/tick_green.png'
 
-const ResultPage = ({navigation}) => {
+const ResultPage = ({navigation, route}) => {
   return (
     <View style={styles.container}>
       <View style={styles.viewText}>
@@ -19,9 +23,9 @@ const ResultPage = ({navigation}) => {
         </View>
       </ImageBackground>
       <View style={styles.viewCard}>
-        <ResultPageCard />
-        <ResultPageCard />
-        <ResultPageCard />
+        <ResultPageCard image={story} text="10 từ đã thuộc" time="45" />
+        <ResultPageCard image={wordUnknown} text="10 từ chưa thuộc thuộc"/>
+        <ResultPageCard image={tick} text="Hay tiếp tục cố gắng" />
       </View>
       <View style={styles.viewButton}>
         <ClickButton

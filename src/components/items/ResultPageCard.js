@@ -14,7 +14,7 @@ const ResultPageCard = (props) => {
         <Text style={styles.text}>{text ? text : 'None'}</Text>
       </View>
       <View style={styles.viewNumber}>
-        <Text style={styles.number}>{time ? time : '0'} s</Text>
+        <Text style={styles.number}>{time ? time + "s" : null}</Text>
       </View>
     </View>
   );
